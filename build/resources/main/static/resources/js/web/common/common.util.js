@@ -1,3 +1,0 @@
-var utill = function() {
-	
-}
