@@ -78,7 +78,7 @@ hs_err_pid*
 **/package-lock.json
 
 # gradle
-#**/.gradle/
+**/.gradle/
 !build.gradle
 
 
