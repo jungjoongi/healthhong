@@ -3,12 +3,14 @@
 
 ## SPAC ::
 
-### was : spring-boot (2.2.4)
-### java : openjdk 11
 ### web server : nginx
-### ci/cd : travis
-### dbms : mariadb
+### was : openjdk-11 / spring-boot (2.2.4)
+### java : openjdk 11
+### dbms : mariadb 
+### view : mustache
+
 ----------
 ### auther : JOONGI. JUNG
+### project site : https://home.jungjoongi.com
 ### e-mail : dev.joongi@gmail.com
 ### blog : https://jungjoongi.com
