@@ -4,7 +4,8 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in src/main/resources/application.properties.enc -out src/main/resources/applications.properties -d
+- openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in application.properties.enc -out application.properties -d
+- mv application.properties ./src/main/resources
 - chmod +x gradlew
 cache:
   directories:
