@@ -6,8 +6,7 @@ branches:
 before_install:
 - pwd
 - ls
-- openssl aes-256-cbc -K $encrypted_45de953a4a46_key -iv $encrypted_45de953a4a46_iv -in application.properties.enc -out application.properties -d
-- mv application.properties ./src/main/resources
+- openssl aes-256-cbc -K $encrypted_45de953a4a46_key -iv $encrypted_45de953a4a46_iv -in ./src/main/resources/application.properties.enc -out ./src/main/resources/application.properties -d
 - chmod +x gradlew
 cache:
   directories:
