@@ -4,6 +4,7 @@ branches:
   only:
   - master
 before_install:
+- sudo apt-get install expect
 - expect -v
 - openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in ./src/main/resources/application.properties.enc -out ./src/main/resources/application.properties -d
 - chmod +x gradlew
