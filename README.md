@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/jungjoongi/healthhong.svg?branch=master)](https://travis-ci.org/jungjoongi/healthhong)
-# Project Name : health hong project
+# Project Name : health hong project [![Build Status](https://travis-ci.org/jungjoongi/healthhong.svg?branch=master)](https://travis-ci.org/jungjoongi/healthhong)
 
 
 ## SPAC ::
