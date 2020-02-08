@@ -14,9 +14,10 @@ cache:
   directories:
   - "$HOME/.m2/repository"
   - "$home/.gradle"
-
+  -
 before_script: "./deploy.sh"
-script: "./gradlew clean build"
+script: "ls -la"
+after_script: "./gradlew clean build"
 notifications:
   email:
     recipients:
