@@ -26,4 +26,5 @@ public class AuthController {
 		return "view/login/login";
 	}
 
+
 }
