@@ -12,10 +12,16 @@ cache:
   directories:
   - "$HOME/.m2/repository"
   - "$home/.gradle"
+before_script:
+  - spawn scp -oStrictHostKeyChecking=no README.md pi@jungjoongi.iptime.org:~/server/deploy
+  - expect "password:"
+  - send $scp_pwd\r
+  - expect eof
+  - EOF
 script: "./gradlew clean build"
 notifications:
   email:
     recipients:
     - dev.joongi@gmail.com
-deploy:
+
 
