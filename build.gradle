@@ -9,9 +9,9 @@ group = 'com.healthhong'
 sourceCompatibility = '11'
 
 jar {
+    enabled = true
     archivesBaseName = "healthhong"
 }
-
 
 
 configurations {
