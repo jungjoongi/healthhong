@@ -8,9 +8,6 @@ group = 'com.healthhong'
 //version = 'beta-0.0.1'
 sourceCompatibility = '11'
 
-springBoot {
-    executable = true
-}
 
 jar {
     enabled = true
