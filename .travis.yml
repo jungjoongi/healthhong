@@ -13,7 +13,7 @@ before_install:
 - except "Are you sure you want to continue connecting (yes/no)?"
 - send "yes"\r
 - expect "pi@jungjoongi.iptime.org's password:"
-- send $scp_pwd\r
+- send "$scp_pwd\r"
 - expect eof
 - EOF
 cache:
