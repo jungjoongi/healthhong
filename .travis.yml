@@ -10,13 +10,12 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_45de953a4a46_key -iv $encrypted_45de953a4a46_iv -in deploy.sh.enc -out deploy.sh -d
 - chmod +x gradlew
 - chmod +x deploy.sh
-- ./deploy.sh
 cache:
   directories:
   - "$HOME/.m2/repository"
   - "$home/.gradle"
-before_script:
 
+before_script: "./deploy.sh"
 script: "./gradlew clean build"
 notifications:
   email:
