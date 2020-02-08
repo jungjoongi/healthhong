@@ -5,8 +5,14 @@ plugins {
 }
 
 group = 'com.healthhong'
-version = '0.0.1-SNAPSHOT'
+//version = 'beta-0.0.1'
 sourceCompatibility = '11'
+
+jar {
+    archivesBaseName = "healthhong"
+}
+
+
 
 configurations {
     developmentOnly
