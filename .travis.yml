@@ -12,12 +12,12 @@ before_install:
 - chmod +x deploy.sh
 cache:
   directories:
-  #- "$HOME/.m2/repository"
-  #- "$home/.gradle"
+  - "$HOME/.m2/repository"
+  - "$home/.gradle"
   -
-before_script: "./deploy.sh"
+deploy: "./deploy.sh"
 script: "ls -alh ./build/libs"
-after_script: "./gradlew clean build"
+after_deploy: "./gradlew clean build"
 notifications:
   email:
     recipients:
