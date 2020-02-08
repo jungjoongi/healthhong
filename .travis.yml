@@ -5,6 +5,7 @@ branches:
   - master
 before_install:
 - sudo apt-get install expect
+- sudo apt-get install zip
 - expect -v
 - openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in ./src/main/resources/application.properties.enc -out ./src/main/resources/application.properties -d
 - openssl aes-256-cbc -K $encrypted_45de953a4a46_key -iv $encrypted_45de953a4a46_iv -in deploy.sh.enc -out deploy.sh -d
@@ -15,8 +16,8 @@ cache:
   - "$HOME/.m2/repository"
   - "$home/.gradle"
   -
-before_script: "./gradlew build clean"
-script: "./gradlew bootjar"
+#before_script: "./gradlew build clean"
+script: "zip -r build.zip ./build/*"
 after_script: "./deploy.sh"
 notifications:
   email:
