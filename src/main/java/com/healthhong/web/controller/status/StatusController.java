@@ -27,8 +27,18 @@ public class StatusController {
 			HttpServletResponse response,
 			HttpSession session) {
 
+		String env = "";
 
-		return port;
+		if(port.equals("8081")) {
+			env = "real1";
+		} else if (port.equals("8082")) {
+			env = "real2";
+		} else {
+			env = "dev";
+		}
+
+
+		return env;
 	}
 
 
