@@ -10,7 +10,6 @@ sourceCompatibility = '11'
 
 
 jar {
-    enabled = true
     archivesBaseName = "healthhong"
 }
 
