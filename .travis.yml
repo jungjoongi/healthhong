@@ -16,7 +16,7 @@ cache:
   - "$home/.gradle"
   -
 before_script: "./deploy.sh"
-script: "ls -la ./build/libs"
+script: "ls -alh ./build/libs"
 after_script: "./gradlew clean build"
 notifications:
   email:
