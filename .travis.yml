@@ -10,7 +10,7 @@ before_install:
 - chmod +x gradlew
 - expect <<EOF
 - scp -q -o StrictHostKeyChecking=no -P 1022 -r README.md pi@jungjoongi.iptime.org:~/server/deploy
-- expect "password:"
+- expect "pi@jungjoongi.iptime.org's password:"
 - send "$scp_pwd\r"
 - expect eof
 - EOF
