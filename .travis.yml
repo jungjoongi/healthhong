@@ -9,7 +9,7 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in ./src/main/resources/application.properties.enc -out ./src/main/resources/application.properties -d
 - chmod +x gradlew
 - expect <<EOF
-- scp -oStrictHostKeyChecking=no README.md pi@jungjoongi.iptime.org:~/server/deploy
+- scp -P 1022 -r README.md pi@jungjoongi.iptime.org:~/server/deploy
 - expect "password:"
 - send $scp_pwd\r
 - expect eof
