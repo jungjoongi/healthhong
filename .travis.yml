@@ -10,6 +10,8 @@ before_install:
 - chmod +x gradlew
 - expect <<EOF
 - scp -P 1022 -r README.md pi@jungjoongi.iptime.org:~/server/deploy
+- except "Are you sure you want to continue connecting (yes/no)?"
+- send "yes"\r
 - expect "password:"
 - send $scp_pwd\r
 - expect eof
