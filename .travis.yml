@@ -12,7 +12,7 @@ before_install:
 - scp -q -o StrictHostKeyChecking=no -P 1022 -r README.md pi@jungjoongi.iptime.org:~/server/deploy
 - except "Are you sure you want to continue connecting (yes/no)?"
 - send "yes"\r
-- expect "password:"
+- expect "pi@jungjoongi.iptime.org's password:"
 - send $scp_pwd\r
 - expect eof
 - EOF
