@@ -73,8 +73,8 @@ hs_err_pid*
 
 # properties
 **/resources/application.properties
-**/resources/env/prd-01/application-prd01.properties
-**/resources/env/prd-02/application-prd02.properties
+**/resources/env/prd01/application-prd01.properties
+**/resources/env/prd02/application-prd02.properties
 
 # npm
 **/node_modules
