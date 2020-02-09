@@ -5,10 +5,9 @@ branches:
   - master
 before_install:
 - sudo apt-get install expect
-- expect -v
 - openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in ./src/main/resources/application.properties.enc -out ./src/main/resources/application.properties -d
-#- openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in ./src/main/resources/application-prd01.properties.enc -out ./src/main/resources/application-prd01.properties -d
-#- openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in ./src/main/resources/application-prd02.properties.enc -out ./src/main/resources/application-prd02.properties -d
+- openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in ./src/main/resources/application-prd01.properties.enc ./src/main/resources/application-prd01.properties -d
+- openssl aes-256-cbc -K $encrypted_4ce98ce55cf7_key -iv $encrypted_4ce98ce55cf7_iv -in ./src/main/resources/application-prd02.properties.enc ./src/main/resources/application-prd02.properties -d
 - openssl aes-256-cbc -K $encrypted_45de953a4a46_key -iv $encrypted_45de953a4a46_iv -in deploy.sh.enc -out deploy.sh -d
 - chmod +x gradlew
 - chmod +x deploy.sh
