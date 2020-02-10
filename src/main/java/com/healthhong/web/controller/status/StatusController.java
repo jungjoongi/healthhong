@@ -30,9 +30,9 @@ public class StatusController {
 		String env = "";
 
 		if(port.equals("8081")) {
-			env = "real1";
+			env = "prd01";
 		} else if (port.equals("8082")) {
-			env = "real2";
+			env = "prd02";
 		} else {
 			env = "dev";
 		}
