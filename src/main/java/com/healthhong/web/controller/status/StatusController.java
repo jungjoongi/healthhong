@@ -3,10 +3,8 @@ package com.healthhong.web.controller.status;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,10 +20,7 @@ public class StatusController {
 	private String port;
 
 	@RequestMapping(value = {"/where"}, method= {RequestMethod.GET, RequestMethod.POST})
-	public String where(
-			HttpServletRequest request,
-			HttpServletResponse response,
-			HttpSession session) {
+	public String where(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
 
 		String env = "";
 
@@ -36,10 +31,6 @@ public class StatusController {
 		} else {
 			env = "dev";
 		}
-
-
 		return env;
 	}
-
-
 }
